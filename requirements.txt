@@ -1,0 +1,7 @@
+torch
+torchvision
+hydra-core
+wandb
+einops
+diffusers
+transformers

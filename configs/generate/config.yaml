@@ -1,0 +1,15 @@
+defaults:
+  - image_generator: sdxl_lightning
+  - dataset_generator: simple_prompts
+
+data_dir: ${root_dir}/dataset
+root_dir:  ${hydra:runtime.cwd}
+batch_size: 1
+
+labels_file: ${root_dir}/list_of_cheese.txt
+
+hydra:
+  run:
+    dir: outputs/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}/
+  job:
+    chdir: true

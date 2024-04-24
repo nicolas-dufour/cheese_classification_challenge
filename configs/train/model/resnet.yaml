@@ -1,0 +1,6 @@
+instance:
+  _target_: models.resnet.ResNetFinetune
+  num_classes: ${dataset.num_classes}
+  frozen: True
+
+name: ResNet18

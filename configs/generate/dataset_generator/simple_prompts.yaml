@@ -1,0 +1,5 @@
+_target_: data.dataset_generators.simple.SimplePromptsDatasetGenerator
+generator: ${image_generator}
+batch_size: ${batch_size}
+output_dir: ${data_dir}/train/simple_prompts
+num_images_per_label: 400

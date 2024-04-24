@@ -1,0 +1,12 @@
+__pycache__
+split_dataset.py
+wandb
+outputs
+/dataset
+challenge_subset
+create_test.py
+/dataset.zip
+/checkpoints
+/challenge_org
+submission_clip.py
+test_clip.py

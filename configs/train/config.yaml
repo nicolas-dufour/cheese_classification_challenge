@@ -1,0 +1,27 @@
+defaults:
+  - model: dinov2
+  - dataset: simple_prompts
+  - optim: adamw
+  - loss_fn: cross_entropy
+
+epochs: 20
+
+datamodule:
+  _target_: data.datamodule.DataModule
+  train_dataset_path: ${dataset.train_path}
+  real_images_val_path: ${dataset.real_images_val_path}
+  train_transform: ${dataset.train_transform}
+  val_transform: ${dataset.test_transform}
+  batch_size: ${dataset.batch_size}
+  num_workers: ${dataset.num_workers}
+
+data_dir: ${root_dir}/dataset
+root_dir:  ${hydra:runtime.cwd}
+checkpoint_path: ${root_dir}/checkpoints/${experiment_name}.pt
+
+experiment_name: ${model.name}_${dataset.name}
+hydra:
+  run:
+    dir: outputs/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}/
+  job:
+    chdir: true
