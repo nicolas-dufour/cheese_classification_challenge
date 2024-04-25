@@ -5,3 +5,4 @@ wandb
 einops
 diffusers
 transformers
+pandas
