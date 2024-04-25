@@ -2,13 +2,13 @@ __pycache__
 split_dataset.py
 wandb
 outputs
-dataset/
-!dataset/.empty
+/dataset/
+!/dataset/.empty
 challenge_subset
 create_test.py
 /dataset.zip
-checkpoints/
-!checkpoints/.empty
+/checkpoints/
+!/checkpoints/.empty
 submission_clip.py
 test_clip.py
 /challenge_org
