@@ -58,7 +58,8 @@ python generate.py dataset_generator=your_new_generator
 If you have vram issues either use smaller diffusion models (SD 1.5) or try CPU offloading (much slower). For example for sdxl lightning you can do
 
 ```
-python generate.py image.generator.use_cpu_offload=true
+python generate.py image_generator.use_cpu_offload=true
+```
 
 ## Create submition
 To create a submition file, you can run 
