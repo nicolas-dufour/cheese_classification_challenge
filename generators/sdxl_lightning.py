@@ -13,6 +13,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 class SDXLLightiningGenerator:
     def __init__(
         self,
+        use_cpu_offload=False,
     ):
         base = "stabilityai/stable-diffusion-xl-base-1.0"
         repo = "ByteDance/SDXL-Lightning"
@@ -29,6 +30,8 @@ class SDXLLightiningGenerator:
             self.pipe.scheduler.config, timestep_spacing="trailing"
         )
         self.pipe.set_progress_bar_config(disable=True)
+        if use_cpu_offload:
+            self.pipe.enable_sequential_cpu_offload()
         self.num_inference_steps = 4
         self.guidance_scale = 0
 
