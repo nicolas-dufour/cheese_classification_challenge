@@ -5,6 +5,12 @@ You will need to create your own training data from tools such as Stable Diffusi
 
 ## Instalation
 
+Cloning the repo:
+```
+git clone git@github.com:nicolas-dufour/cheese_classification_challenge.git
+cd cheese_classification_challenge
+```
+Install dependencies:
 ```
 conda create -n cheese_challenge python=3.10
 conda activate cheese_challenge
