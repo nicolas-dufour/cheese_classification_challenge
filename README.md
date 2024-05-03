@@ -14,6 +14,19 @@ Install dependencies:
 ```
 conda create -n cheese_challenge python=3.10
 conda activate cheese_challenge
+```
+### Install requirements:
+##### Install Pytorch:
+If CUDA>=12.0:
+```
+pip install torch torchvision
+```
+If CUDA == 11.8
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 
+```
+Then install the rest of the requirements
+```
 pip install -r requirements.txt
 ```
 
